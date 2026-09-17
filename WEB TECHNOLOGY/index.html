@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Reddy Library</title>
+</head>
+<body>
+   Sure 👍 **Malla Reddy Library** kosam complete web page build cheyyadaniki nenu step-by-step ga guide chesthaanu.
+
+Manam simple ga **HTML + CSS + JavaScript** tho start cheddam. First version lo:
+
+1. 🏫 Library Home Page
+2. 📚 Books section
+3. 🔎 Book search
+4. 👨‍🎓 Student/Member section
+5. 🕐 Library timings
+6. 📞 Contact details
+7. 📱 Mobile responsive design
+8. 🎨 Malla Reddy theme/design
+
+### Step 1 — Project folder create cheyyi
+
+Computer lo oka folder create cheyyi:
+
+```text
+malla-reddy-library/
+│
+├── index.html
+├── style.css
+└── script.js
+```
+
+### Step 2 — `index.html`
+
+`index.html` file create chesi, below code paste cheyyi:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Malla Reddy Library</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                📚 Malla Reddy Library
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#timings">Timings</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Malla Reddy Library</h1>
+
+            <p>
+                Explore knowledge, discover books,
+                and build your future.
+            </p>
+
+            <a href="#books" class="btn">
+                Explore Books
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section">
+
+        <h2>About Our Library</h2>
+
+        <p>
+            Malla Reddy Library provides students with access
+            to academic resources, reference books, journals,
+            digital resources and a peaceful environment for
+            learning and research.
+        </p>
+
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h3>50,000+</h3>
+            <p>Books</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>5,000+</h3>
+            <p>Students</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>100+</h3>
+            <p>Journals</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>24/7</h3>
+            <p>Digital Access</p>
+        </div>
+
+    </section>
+
+
+    <!-- Books Section -->
+    <section id="books" class="section">
+
+        <h2>Library Books</h2>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="bookSearch"
+                placeholder="Search for a book..."
+            >
+
+            <button onclick="searchBooks()">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Books -->
+        <div class="book-container" id="bookContainer">
+
+            <div class="book-card">
+                <h3>Data Structures</h3>
+                <p>Author: Mark Allen Weiss</p>
+                <span>Computer Science</span>
+            </div>
+
+            <div class="book-card">
+                <h3>Operating Systems</h3>
+                <p>Author: Abraham Silberschatz</p>
+                <span>Computer Science</span>
+            </div>
+
+            <div class="book-card">
+                <h3>Database Management Systems</h3>
+                <p>Author: Raghu Ramakrishnan</p>
+                <span>Database</span>
+            </div>
+
+            <div class="book-card">
+                <h3>Engineering Mathematics</h3>
+                <p>Author: R.K. Jain</p>
+                <span>Mathematics</span>
+            </div>
+
+            <div class="book-card">
+                <h3>Computer Networks</h3>
+                <p>Author: Andrew S. Tanenbaum</p>
+                <span>Networking</span>
+            </div>
+
+            <div class="book-card">
+                <h3>Artificial Intelligence</h3>
+                <p>Author: Stuart Russell</p>
+                <span>AI & ML</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Timings -->
+    <section id="timings" class="section timings">
+
+        <h2>Library Timings</h2>
+
+        <div class="timing-card">
+
+            <p>
+                <strong>Monday - Friday:</strong>
+                8:00 AM - 8:00 PM
+            </p>
+
+            <p>
+                <strong>Saturday:</strong>
+                9:00 AM - 5:00 PM
+            </p>
+
+            <p>
+                <strong>Sunday:</strong>
+                Closed
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Malla Reddy Campus, Hyderabad</p>
+
+        <p>📞 +91 XXXXX XXXXX</p>
+
+        <p>📧 library@example.com</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Malla Reddy Library.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
+
+### Step 3 — `style.css`
+
+Ippudu `style.css` create chesi:
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+
+header {
+    background: #0b2a4a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(4, 25, 45, 0.75),
+            rgba(4, 25, 45, 0.75)
+        ),
+        url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 750px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    background: #ffd166;
+    color: #172b4d;
+
+    padding: 13px 28px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+
+/* Common Section */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: #0b2a4a;
+    margin-bottom: 20px;
+}
+
+.section > p {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* Statistics */
+
+.stats {
+    background: #0b2a4a;
+
+    padding: 50px 25px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.stat-card {
+    text-align: center;
+    color: white;
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    color: #ffd166;
+}
+
+.stat-card p {
+    font-size: 17px;
+}
+
+
+/* Search */
+
+.search-box {
+    margin: 35px auto;
+    display: flex;
+    max-width: 600px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 14px 25px;
+
+    border: none;
+
+    background: #0b2a4a;
+    color: white;
+
+    border-radius: 0 8px 8px 0;
+
+    cursor: pointer;
+}
+
+
+/* Books */
+
+.book-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.book-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card h3 {
+    color: #0b2a4a;
+    margin-bottom: 10px;
+}
+
+.book-card span {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 5px 10px;
+
+    background: #e7f0fa;
+
+    color: #0b2a4a;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+
+/* Timings */
+
+.timings {
+    background: #eef3f8;
+    max-width: none;
+}
+
+.timing-card {
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.timing-card p {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* Contact */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 12px;
+}
+
+
+/* Footer */
+
+footer {
+    background: #061c31;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .book-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .nav-links {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input,
+    .search-box button {
+        border-radius: 8px;
+    }
+}
+```
+
+### Step 4 — `script.js`
+
+Ippudu `script.js` file create cheyyi:
+
+```javascript
+function searchBooks() {
+
+    const searchInput =
+        document.getElementById("bookSearch");
+
+    const searchValue =
+        searchInput.value.toLowerCase().trim();
+
+    const books =
+        document.querySelectorAll(".book-card");
+
+    books.forEach(function(book) {
+
+        const bookText =
+            book.textContent.toLowerCase();
+
+        if (bookText.includes(searchValue)) {
+
+            book.style.display = "block";
+
+        } else {
+
+            book.style.display = "none";
+
+        }
+
+    });
+
+}
+```
+
+### Step 5 — Website run cheyyadam
+
+Folder ila undali:
+
+```text
+malla-reddy-library
+│
+├── index.html
+├── style.css
+└── script.js
+```
+
+`index.html` meeda **double click** cheyyi.
+
+Browser lo website open avutundi. 🎉
+
+---
+
+## Next level lo manam em add cheyyachu?
+
+Basic website ready ayyaka, **real Library Management Website** laga convert cheyyachu:
+
+```text
+MALLA REDDY LIBRARY
+│
+├── Home
+├── About Library
+├── Book Catalogue
+│   ├── CSE
+│   ├── ECE
+│   ├── EEE
+│   ├── Mechanical
+│   └── Civil
+│
+├── Search Books
+├── Student Login
+├── Librarian Login
+├── Issue Book
+├── Return Book
+├── Due Date
+├── Digital Library
+├── E-Books
+├── Journals
+├── Notices
+└── Contact
+```
+
+**Important:** paina code lo books, timings, phone number, email, campus details example data. Mee actual Malla Reddy institution/library details tho replace cheyyali.
+
+Next step lo nenu **complete professional version** ni **Login + Book Search + Add/Issue/Return Books + Admin Dashboard + Database** tho build cheyyadaniki step-by-step code ivvagalanu.
+ 
+    
+</body>
+</html>
